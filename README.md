@@ -29,3 +29,11 @@ Insira na página um botão, que irá adicionar o texto digitado pelo usuário c
 Coloque na página também uma lista não ordenada, onde serão adicionados os itens criados pelo usuário.
 ![image](https://github.com/gibarbato/fullstack_senai_helth_toDoList-/assets/79756088/3843b19e-c17a-4dea-b7a2-04515ae2a613)
 
+
+[M1S05] Ex. 4 - Checkbox e Lixeira (to-do list project)
+
+Adicione caixas de seleção, uma para cada item da lista.
+
+Adicione botões de remover (“x“) para cada item da lista.
+
+Com CSS, remova os pontos da lista e o espaçamento à esquerda.
