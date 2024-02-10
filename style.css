@@ -1,8 +1,18 @@
-
+* {
+    box-sizing: border-box;
+  }
+  
+  ul{
+    margin: 0;
+    padding: 0;
+    
+}
 
 li {
     list-style-type: none;
+    padding-left: 0;
 }
+
 
 table {
     justify-content: center;
@@ -14,25 +24,49 @@ tr {
     /* border: 1px solid black; */
 }
 
-td {
+tr:hover {
+    background-color: lightgray;
+}
+
+/* td {
     display: flex;
     flex-direction: row;
     width:300px;
-    padding: 20px;
+    padding: 10px;
     /* border: 1px solid black; */
-}
-.td-small  {
+} */
+/* .td-small  {
     display: flex;
     flex-direction: row;
-    width:20px;
-    padding: 20px;
+    width:75px;
+    padding: 5px;
     /* border: 1px solid black; */
-}
+} */
 
-
-
-.input-tarefa{
+/* .input-tarefa{
     width: 300px;
     height: 40px;
-}
+} */
+
+  When clicked on, add a background color and strike out text
+  tr.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  tr.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
 

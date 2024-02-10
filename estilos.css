@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}    
+
+li {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+span {
+    text-align: left;
+}
+
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+}

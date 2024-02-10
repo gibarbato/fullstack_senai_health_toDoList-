@@ -21,12 +21,11 @@ function exibirTarefas() {
     // Adiciona cada tarefa a listaInicial
     tarefas.forEach(function (tarefa, index) {
         setTimeout(function () {
-            var tarefaDiv = document.createElement("tr");
+            var tarefaDiv = document.createElement("li");
             tarefaDiv.innerHTML = `
-               <td class="td-small"> <input type="checkbox"/></td> 
-               <td> ${tarefa.nome} </td> 
-               <td>${tarefa.tipo}</td>
-               <td class="td-small"><button>x</button></td>
+               <input type="checkbox" class="form-check-input check-tarefa"/> 
+                ${tarefa.nome} - ${tarefa.tipo}
+               <button class="btn btn-outline-danger">x</button>
     `;
             listaInicial.appendChild(tarefaDiv);
         }, 500 * index)
