@@ -23,8 +23,8 @@ function exibirTarefas() {
         setTimeout(function () {
             var tarefaDiv = document.createElement("li");
             tarefaDiv.innerHTML = `
-               <input type="checkbox" class="form-check-input check-tarefa"/> 
-                ${tarefa.nome} - ${tarefa.tipo}
+               <input id="item-${index}" type="checkbox" class="form-check-input check-tarefa"/> 
+                <label for="item-${index} class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label>
                <button class="btn btn-outline-danger">x</button>
     `;
             listaInicial.appendChild(tarefaDiv);

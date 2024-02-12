@@ -1,20 +1,57 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 80%;
+    text-align: center;
+    
+}
+
 ul {
+    
     list-style-type: none;
     padding-left: 0;
 }    
 
 li {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
+}
+
+li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+}
+.btn-cancel:hover {
+    background-color: #FBCFCF;
+    color: red;
+    cursor: pointer;
+    border: 2px solid red;
+    border-radius: 45px;
 }
 
 span {
     text-align: left;
 }
 
+main {
+    text-align: center;
+    width: 80%;
+    height: auto;
+}
 
 .cabecalho{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+}
+
+input:checked + .checkbox-wrapper {
+    text-decoration: line-through;
 }
