@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <title>to Do List</title>
 </head>
 <body>
-    <header>
+    <header class = "bg-primary text-white">
         <H1>Lista de tarefas</H1>
     </header>
     
@@ -21,18 +21,25 @@
             </select>
             <button>Adicionar tarefa</button>
         </div>
-        <div>
-            <ul class="list-group list-group-item-primary ">
-                <li><input type="checkbox" id="item-1"> <label for="item-1" class="checkbox-wrapper">programar em JavaScript</label> <button class="btn-cancel danger">x</button></li>
+
+        <div class = "lista-tarefas">
+            <ul id="lista-tarefas">
+            </ul>
+        </div>
+
+        <!-- <div class="lista-tarefas"> -->
+            <!-- <ul class="list-group list-group-item-primary ">
+                <li><input type="checkbox" id="item-1"> <label for="item-1" class="checkbox-wrapper">programar em JavaScript</label> <button class="btn-cancel">x</button></li>
                 <li><input type="checkbox" id="item-2"> <label for="item-2" class="checkbox-wrapper">ir no supermercado</label><button class="btn-cancel">x</button></li>
                 <li><input type="checkbox" id="item-3"> <label for="item-3" class="checkbox-wrapper">estudar</label><button class="btn-cancel">x</button></li>
                 <li><input type="checkbox" id="item-4"> <label for="item-4" class="checkbox-wrapper">voltar a trabalhar</label><button class="btn-cancel">x</button></li>
-            </ul>
-        </div>
+            </ul> -->
+        <!-- </div> -->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
