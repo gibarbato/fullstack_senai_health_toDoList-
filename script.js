@@ -36,9 +36,6 @@ function atualizarListaTarefas() {
 }
 
 
-
-idValor();
-
 document.getElementById("btnAdicionarTarefa").addEventListener("click", adicionarTarefa);
 
 
