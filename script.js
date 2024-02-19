@@ -1,39 +1,35 @@
-var tarefas = [
-  {
-    nome: "aula Fullstack",
-    tipo: "pessoal"
-  },
-  {
-    nome: "planejamento",
-    tipo: "trabalho"
-  },
-  {
-    nome: "reunião",
-    tipo: "trabalho"
-  },
-  {
-    nome: "supermercado",
-    tipo: "pessoal"
-  },
-];
+var tarefas = [];
 
-console.log(tarefas);
+function adicionarTarefa() {
+  var titulo = document.getElementById("tituloTarefa").value;
+  var categoria = document.getElementById("categoria-da-tarefa").value;
+  
+  tarefas.push({ nome: titulo, tipo: categoria });
+  atualizarListaTarefas();
+}
 
-function exibirTarefas() {
-  var listaInicial = document.getElementById("lista-tarefas");
+// function excluirTarefa(index) {
+//   tarefas.splice(index, 1); // Remove a tarefa do array
+//   atualizarListaTarefas(); // Atualiza a lista na página
+// }
 
-  // Adiciona cada tarefa a listaInicial
-  tarefas.forEach(function (tarefa, index) {
-    setTimeout(function () {
-      var tarefaDiv = document.createElement("ul");
-      tarefaDiv.innerHTML = `
-        <li>
-        <input type="checkbox" id="item-${index}"> <label for="item-${index}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label> <button class="btn-cancel">x</button>
-        </li>
-    `;
-      listaInicial.appendChild(tarefaDiv);
-    }, 500 * index)
+function excluirTarefa(checkboxId) {
+  var checkbox = document.getElementById(checkboxId);
+  var li = checkbox.parentNode;
+  li.parentNode.removeChild(li);
+}
+
+function atualizarListaTarefas() {
+  var listaTarefas = document.getElementById("lista-tarefas");
+  var li = document.createElement("li");
+  tarefas.forEach(function(tarefa, index) {
+      li.innerHTML =`
+        <input type ="checkbox"  id="item-${index}">
+        <label for="item-${index}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label>  
+        <button class="btn-cancel">x</button>`;
+    listaTarefas.appendChild(li);
   });
 }
 
-exibirTarefas();
+document.getElementById("btnAdicionarTarefa").addEventListener("click", adicionarTarefa);
+document.getElementById("btn-cancel").addEventListener("click", excluirTarefa(index));

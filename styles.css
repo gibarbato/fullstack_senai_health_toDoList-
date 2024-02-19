@@ -1,0 +1,66 @@
+body{
+    background:dimgray;
+    padding: 0;
+    
+}
+
+header{
+    background-color:dimgray;
+    color:black;
+    text-align: center;
+    margin: 0 400px;
+        border: 1px solid black;
+        border-radius: 25px ;
+}
+
+.cabecalho {
+    border-radius: 25px ;
+    background-color:darkgray;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    }
+
+main {
+    background-color:darkgray;
+    text-align: center;
+    margin: 0 400px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        padding:0;
+    }    
+    
+    li {
+        display: flex;
+        justify-content: space-between; 
+    }
+    
+    li:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
+
+    label:hover {
+        cursor: pointer;
+    }
+    .btn-cancel:hover {
+        background-color: #FBCFCF;
+        color: red;
+        cursor: pointer;
+        border: 2px solid red;
+        border-radius: 45px;
+    }
+    
+    span {
+        text-align: left;
+    }
+
+    input:checked + .checkbox-wrapper {
+        text-decoration: line-through;
+        /* color: red; */
+    }
