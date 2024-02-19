@@ -58,6 +58,7 @@ main {
     li {
         display: flex;
         justify-content: space-between; 
+        border-radius: 25px;
     }
     
     li:hover {
