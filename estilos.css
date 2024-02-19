@@ -66,4 +66,5 @@ main {
 
 input:checked + .checkbox-wrapper {
     text-decoration: line-through;
+    background-color: #2f4f4f;
 }

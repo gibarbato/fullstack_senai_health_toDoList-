@@ -9,24 +9,44 @@ header{
     color:black;
     text-align: center;
     margin: 0 400px;
-        border: 1px solid black;
-        border-radius: 25px ;
+    border: 1px solid black;
+    border-radius: 25px ;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+header > h1 {
+    transform: rotate(-1.5deg);
+    text-decoration: underline overline;
+
 }
 
 .cabecalho {
-    border-radius: 25px ;
     background-color:darkgray;
     text-align: center;
-    /* border-bottom: 1px solid black; */
+    border: 1px solid black;
+    border-radius: 25px;
+    }
+    
+.lista-tarefas {
+    background-color:darkgray;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 5px 0 5px 0;
     }
 
+
 main {
+    font-family: "Protest Revolution", sans-serif;
     background-color:darkgray;
     text-align: center;
     margin: 0 400px;
     padding: 15px;
     border: 1px solid black;
     border-radius: 25px;
+    /* transform: rotate(1.5deg); //rotaciona o main */
     }
 
     ul {
@@ -48,6 +68,23 @@ main {
     label:hover {
         cursor: pointer;
     }
+
+    #tituloTarefa, #categoria-da-tarefa, #btnAdicionarTarefa{
+        border-radius: 45px;
+    }
+
+    #categoria-da-tarefa:hover{
+        background-color: #8fbc8f;
+        border-radius: 45px;
+        cursor: pointer;
+    }
+
+    #btnAdicionarTarefa:hover{
+        background-color: #8fbc8f;
+        border-radius: 45px;
+        cursor: pointer;
+    }
+
     .btn-cancel:hover {
         background-color: #FBCFCF;
         color: red;
