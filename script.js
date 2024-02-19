@@ -4,6 +4,8 @@ function adicionarTarefa() {
   var titulo = document.getElementById("tituloTarefa").value;
   var categoria = document.getElementById("categoria-da-tarefa").value;
   
+  if (titulo === "") return;
+
   tarefas.push({ nome: titulo, tipo: categoria });
   atualizarListaTarefas();
 }
