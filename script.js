@@ -23,16 +23,20 @@ function atualizarListaTarefas() {
       li.innerHTML =`
         <input type ="checkbox"  id="${index}">
         <label for="${index}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label>  
-        <button class="btn-cancel" id="btn-${index}">x</button>`;
+        <button class="btn-cancel" id="${index}">x</button>`;
     listaTarefas.appendChild(li);
     
     let idbtn = document.getElementById(`${index}`).id;
     console.log(idbtn);
 
+    // document.getElementById(`btn-${index}`).addEventListener("click", function() {
+    //   tarefas.splice(index, 1);
+    //   atualizarListaTarefas();
+    // })
+
     document.getElementById("tituloTarefa").value = "";
     document.getElementById("categoria-da-tarefa").value = "";
   });
-
 }
 
 
