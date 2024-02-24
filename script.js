@@ -47,11 +47,17 @@ function marcarTarefa(indice) {
   }
 }
 
-function eventoRemover(){
-    document.querySelectorAll(".remove").forEach(function (element) {
-        element.addEventListener('click', function(){
-            tarefas.splice(element.value, 1);
-            mostrarTarefas();
-        })
-    })
+function eventoRemover() {
+  document.querySelectorAll(".remove").forEach(function (element) {
+      element.addEventListener('click', function () {
+          // Perguntar ao usuário se ele realmente deseja excluir o item
+          const confirmacao = confirm("Tem certeza que deseja excluir este item?");
+
+          if (confirmacao) {
+              // Se o usuário confirmar, remover o item correspondente da lista
+              tarefas.splice(element.value, 1);
+              mostrarTarefas();
+          }
+      });
+  });
 }
