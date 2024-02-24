@@ -59,6 +59,7 @@ main {
         display: flex;
         justify-content: space-between; 
         border-radius: 25px;
+        padding: 5px 10px;
     }
     
     li:hover {
@@ -86,6 +87,10 @@ main {
         cursor: pointer;
     }
 
+    .btn-cancel{
+        border-radius: 45px;
+    }
+    
     .btn-cancel:hover {
         background-color: #FBCFCF;
         color: red;

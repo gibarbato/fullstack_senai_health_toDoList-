@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>To Do List</title>
+    <script src="script.js" defer></script>
+    <title>TO DO LIST</title>
 </head>
 <body>
     <header>
         <h1>Lista de Tarefas</h1>
     </header>
     <main>
-        <div class="cabecalho">
-            <input id="tituloTarefa" placeholder="digite uma tarefa..." style="font-size: 1em;"/>
+        <form id="form-tarefa" class="cabecalho">
+            <input type="text" name="nome-tarefa" id="tituloTarefa" placeholder="Insira uma tarefa">
             <select id="categoria-da-tarefa" style="font-size: 1em;">
                 <option value="">Tipo Tarefa</option>
                 <option value="trabalho">Trabalho</option>
                 <option value="pessoal">Pessoal</option>
               </select>
-            <button id="btnAdicionarTarefa" ">Adicionar tarefa</button>
-        </div>
-
-        <div class = "lista-tarefas">
-            <ul id="lista-tarefas">
-            </ul>
-        </div>
+            <input id="btnAdicionarTarefa" type="submit" value="Adicionar Tarefa">
+        </form>
+        <div class="lista-tarefas"></div>
     </main>
-    
-    <script src="script.js"></script>
 </body>
 </html>
