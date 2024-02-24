@@ -37,6 +37,10 @@ header > h1 {
     margin: 5px 0 5px 0;
     }
 
+.total-tarefas{
+        margin: 15px;
+        border-bottom: 1px solid black;
+    }
 
 main {
     font-family: "Protest Revolution", sans-serif;

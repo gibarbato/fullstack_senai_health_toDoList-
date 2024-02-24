@@ -22,17 +22,24 @@ function mostrarTarefas() {
   let listaTarefas = document.querySelector('.lista-tarefas');
   listaTarefas.innerHTML = "";
   let i = 0;
-
+  let contador = 0;
+  
   tarefas.map(function (tarefa) {
       listaTarefas.innerHTML += `
       <li class="lista-tarefa-single">
-          <input type="checkbox" id="${i}" onchange="marcarTarefa(${i})">
-          <label for="${i}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label> 
-          <button value="${i}" class="remove btn-cancel">X</button>
+      <input type="checkbox" id="${i}" onchange="marcarTarefa(${i})">
+      <label for="${i}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label> 
+      <button value="${i}" class="remove btn-cancel">X</button>
       </li>
       `;
       i++;
+      contador += 1;
   })
+
+  if(contador != 0){
+      let totalTarefas = document.querySelector('.total-tarefas');
+      totalTarefas.innerHTML = `<div>Número de tarefas - ${contador}</div>`;
+  } 
   eventoRemover();
 }
 
@@ -50,11 +57,9 @@ function marcarTarefa(indice) {
 function eventoRemover() {
   document.querySelectorAll(".remove").forEach(function (element) {
       element.addEventListener('click', function () {
-          // Perguntar ao usuário se ele realmente deseja excluir o item
           const confirmacao = confirm("Tem certeza que deseja excluir este item?");
 
           if (confirmacao) {
-              // Se o usuário confirmar, remover o item correspondente da lista
               tarefas.splice(element.value, 1);
               mostrarTarefas();
           }
