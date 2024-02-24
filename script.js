@@ -19,21 +19,32 @@ document.querySelector('#form-tarefa').addEventListener('submit', (event) => {
 })
 
 function mostrarTarefas() {
-    let listaTarefas = document.querySelector('.lista-tarefas');
-    listaTarefas.innerHTML = "";
-    let i = 0;
+  let listaTarefas = document.querySelector('.lista-tarefas');
+  listaTarefas.innerHTML = "";
+  let i = 0;
 
-    tarefas.map(function (tarefa) {
-        listaTarefas.innerHTML += `
-        <li class="lista-tarefa-single">
-            <input type ="checkbox"  id="${i}">
-            <label for="${i}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label> 
-            <button value="${i}" class="remove btn-cancel">X</button>
-        </li>
-        `;
-        i++;
-    })
-    eventoRemover();
+  tarefas.map(function (tarefa) {
+      listaTarefas.innerHTML += `
+      <li class="lista-tarefa-single">
+          <input type="checkbox" id="${i}" onchange="marcarTarefa(${i})">
+          <label for="${i}" class="checkbox-wrapper">${tarefa.nome} - ${tarefa.tipo}</label> 
+          <button value="${i}" class="remove btn-cancel">X</button>
+      </li>
+      `;
+      i++;
+  })
+  eventoRemover();
+}
+
+function marcarTarefa(indice) {
+  const checkbox = document.getElementById(indice);
+  const label = checkbox.nextElementSibling;
+  
+  if (checkbox.checked) {
+      label.style.textDecoration = "line-through";
+  } else {
+      label.style.textDecoration = "none";
+  }
 }
 
 function eventoRemover(){

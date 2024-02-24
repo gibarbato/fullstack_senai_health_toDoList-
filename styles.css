@@ -103,7 +103,8 @@ main {
         text-align: left;
     }
 
-    input:checked + .checkbox-wrapper {
+    // comentado para utilizar utilizando a function marcarTarefa() no script
+    /* input:checked + .checkbox-wrapper {
         text-decoration: line-through;
-        /* color: red; */
-    }
+        color: red;
+    } */
