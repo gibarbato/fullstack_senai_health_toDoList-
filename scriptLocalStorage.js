@@ -44,12 +44,11 @@ function mostrarTarefas() {
         let li = document.createElement('li')
         let checked = tarefa.concluido ? 'checked' : ''; // Verifica se a tarefa está concluída
         let textDecoration = tarefa.concluido ? 'line-through' : 'none'; // Define o textDecoration
+        li.classList.add = "lista-tarefa-single"
         li.innerHTML += `
-        <li class="lista-tarefa-single">
         <input type="checkbox" id="${i}" onchange="marcarTarefa(${i})" ${checked}>
         <label for="${i}" class="checkbox-wrapper" style="text-decoration: ${textDecoration};">${tarefa.nome} - ${tarefa.tipo}</label> 
         <button value="${i}" class="remove btn-cancel">X</button>
-        </li>
        `
         listaUl.appendChild(li)
         i++;
