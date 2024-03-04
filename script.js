@@ -13,6 +13,8 @@ document.querySelector('#form-tarefa').addEventListener('submit', (event) => {
         tipo: nomeCategoria
     })
 
+    // localStorage.setItem("tasks", JSON.stringify(tarefas))
+
     mostrarTarefas();
     document.querySelector('input[name=nome-tarefa]').value="";
     document.getElementById("categoria-da-tarefa").value="";
