@@ -112,3 +112,115 @@ main {
         text-decoration: line-through;
         color: red;
     } */
+
+body {
+    background: dimgray;
+    padding: 0;
+}
+
+header {
+    background-color: dimgray;
+    color: black;
+    text-align: center;
+    margin: 0 auto; /* Center the header */
+    max-width: 90%; /* Limit header width */
+    border: 1px solid black;
+    border-radius: 25px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+header > h1 {
+    transform: rotate(-1.5deg);
+    text-decoration: underline overline;
+}
+
+.cabecalho,
+.lista-tarefas {
+    background-color: darkgray;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 5px auto; /* Center and add margin */
+    max-width: 90%; /* Limit width */
+}
+
+.total-tarefas {
+    margin: 15px auto; /* Center and add margin */
+    border-bottom: 1px solid black;
+}
+
+main {
+    font-family: "Protest Revolution", sans-serif;
+    background-color: darkgray;
+    text-align: center;
+    margin: 0 auto; /* Center main */
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    max-width: 90%; /* Limit width */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+#tituloTarefa,
+#categoria-da-tarefa,
+#btnAdicionarTarefa {
+    border-radius: 45px;
+}
+
+#categoria-da-tarefa:hover,
+#btnAdicionarTarefa:hover {
+    background-color: #8fbc8f;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    border-radius: 45px;
+}
+
+.btn-cancel:hover {
+    background-color: #fbcfcf;
+    color: red;
+    cursor: pointer;
+    border: 2px solid red;
+    border-radius: 45px;
+}
+
+span {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    header,
+    .cabecalho,
+    .lista-tarefas,
+    .total-tarefas,
+    main {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+}
